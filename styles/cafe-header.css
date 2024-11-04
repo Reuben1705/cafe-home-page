@@ -1,0 +1,75 @@
+.header{
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color:rgb(99, 99, 99);
+    z-index: 100;
+}
+
+.left-section{
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.cafe-logo{
+    height: 60px;
+    object-fit: cover;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.middle-section{
+    flex: 1;
+    max-width: 1200px;
+    min-width: 100px;
+}
+
+.right-section{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    min-width: 500px;
+}
+
+.header-links-container{
+    display: inline-block;
+}
+
+.header-links {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    color: rgb(79, 79, 79);
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 2px; /* Adds space between text and underline */
+    display: inline-block;
+}
+
+.header-links::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0; /* Start with no width */
+    height: 1.5px; /* Thickness of the underline */
+    background-color: rgb(76, 76, 76); /* Color of the underline */
+    transform: translateX(-50%); /* Center the underline */
+    transition: width 0.2s ease; /* Animate only the width for smoother transition */
+}
+
+.header-links:hover::after {
+    width: 100%; /* Expand underline to full width */
+}

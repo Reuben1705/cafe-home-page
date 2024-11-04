@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Broom Cafe</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="/Broom Cafe/styles/cafe-header.css">
+    <link rel="stylesheet" href="/Broom Cafe/styles/general.css">
+    <link rel="stylesheet" href="/Broom Cafe/styles/content.css">
+    <link rel="stylesheet" href="styles/footer.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div class="left-section">
+            <img class="cafe-logo" src="images/Cafe-logo.png">
+        </div>
+        <div class="middle-section"></div>
+        <div class="right-section">
+            <div class="header-links-container"><a class="header-links" href="home.html">Home</a></div>
+            <div class="header-links-container"><a class="header-links" href="location.html">Location</a></div>
+            <div class="header-links-container"><a class="header-links" href="menu.html">Menu</a></div>
+            <div class="header-links-container"><a class="header-links" href="food-gallery.html">Food Gallery</a></div>
+            <div class="header-links-container"><a class="header-links" href="about-us.html">About Us</a></div>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner-container">
+        <img class="banner" src="images/banner1.jpg">
+    </div>
+
+    <!-- Content Section -->
+    <div class="grid-container">
+        <div class="content-grid">
+            <div class="content-container">
+                <h2 class="content-title">Menu</h2>
+                <img class="coffee" src="images/coffee.png">
+                <button class="menu-button">See Full Menu</button>
+            </div>
+            <div class="content-container">
+                <h2 class="content-title">Location</h2>
+                <img class="location" src="images/location-icon.png">
+                <button class="location-button">View Location</button>
+            </div>
+            <div class="content-container">
+                <h2 class="content-title">Food Gallery</h2>
+                <img class="gallery" src="images/gallery.jpg">
+                <button class="gallery-button">View Gallery</button>
+            </div>
+            <div class="content-container">
+                <h2 class="content-title">About Us</h2>
+                <img class="coffee-heart" src="images/coffee-heart.JPG">
+                <button class="about-button">Find Out More</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="footer-text-container">
+            <p class="footer-title">The Broom Cafe</p>
+            <p class="footer-text">Find us on:</p>
+            <div class="icon-container">
+                <a href="https://www.facebook.com/thebroomcafe2019/?locale=en_GB" target="_blank"><img class="icon" src="images/facebook.png"></a>
+            </div>
+            <div class="icon-container">
+                <a href="https://www.instagram.com/thebroomcafe2019/" target="_blank"><img class="icon" src="images/instagram.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Image Rotation -->
+    <script>
+        const banner = document.querySelector('.banner');
+        const images = [
+            "images/banner1.jpg",
+            "images/banner2.jpg",
+            "images/banner3.jpg"
+        ];
+        let index = 0;
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            banner.style.opacity = 0;
+            setTimeout(() => {
+                banner.src = images[index];
+                banner.style.opacity = 1;
+            }, 500);
+        }, 6000);
+    </script>
+</body>
+</html>
