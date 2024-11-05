@@ -1,0 +1,168 @@
+/* General Mobile Styles */
+body {
+    padding-top: 78px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(244, 242, 235);
+}
+
+/* Header Section */
+.header {
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-bottom: 2px solid rgb(99, 99, 99);
+    z-index: 100;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.right-section {
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+.cafe-logo {
+    height: 60px;
+    object-fit: cover;
+    padding: 10px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    background-color: rgb(36, 36, 36);
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-container {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Content Section */
+.grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content-container {
+    background-color: white;
+    height: 360px;
+    min-width: 300px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05), 0 1px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner */
+.banner-container {
+    display: flex;
+    flex: 1;
+    height: auto;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 1s ease;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+    .right-section {
+        min-width: unset;
+        margin-right: 10px;
+    }
+    
+    .content-grid {
+        margin-top: 50px;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 15px;
+    }
+
+    .header-links {
+        font-size: 11px;
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 600px) {
+    /* Header adjustments */
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .right-section {
+        flex-direction: column;
+        align-items: center;
+        min-width: unset;
+        margin-right: 0;
+    }
+
+    .header-links {
+        font-size: 16px;
+        padding: 5px;
+        display: none
+    }
+
+    /* Adjust grid layout */
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content-container{
+        margin-bottom: 30px;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-container {
+        margin: 5px;
+    }
+    
+    .banner-container {
+        height: 400px; /* Adjust banner height for mobile */
+    }
+}
